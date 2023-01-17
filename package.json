@@ -4,7 +4,8 @@
   "description": "This is a workshop about Cypress",
   "main": "index.js",
   "scripts": {
-    "test:open": "cypress open"
+    "test:open": "cypress open",
+    "test": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/daniela-zuluaga/cypress-training#readme",
   "devDependencies": {
-    "cypress": "^12.3.0"
+    "cypress": "^12.3.0",
+    "typescript": "^4.9.4"
   }
 }
