@@ -4,7 +4,7 @@
   "description": "This is a workshop about Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/daniela-zuluaga/cypress-training/issues"
   },
-  "homepage": "https://github.com/daniela-zuluaga/cypress-training#readme"
+  "homepage": "https://github.com/daniela-zuluaga/cypress-training#readme",
+  "devDependencies": {
+    "cypress": "^12.3.0"
+  }
 }
