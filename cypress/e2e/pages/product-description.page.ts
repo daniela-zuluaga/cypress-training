@@ -8,8 +8,9 @@ class ProductDescriptionPage {
   }
 
   public getPrice (): void {
-    cy.get(this.price).then((price) => {
-      cy.wrap(price.text()).as('price')
+    cy.get(this.price).then((textPrice) => {
+      const price = textPrice.text().split(' ')
+      cy.wrap(price[0].substring(1)).as('price')
     })
   }
 

@@ -10,6 +10,7 @@ class ShoppingCartPage {
   readonly purchase: string
   readonly alert: string
   readonly confirm: string
+  readonly price: string
 
   constructor () {
     this.cartOption = '#cartur'
@@ -23,10 +24,15 @@ class ShoppingCartPage {
     this.purchase = '[onclick="purchaseOrder()"]'
     this.alert = '.sweet-alert > h2'
     this.confirm = '.confirm'
+    this.price = '.success'
   }
 
   public goToCart (): void {
     cy.get(this.cartOption).click()
+    cy.get('@price').then((price) => {
+      cy.get(this.price).should('contain', price)
+    }
+    )
   }
 
   public fillFormOrder (): void {
