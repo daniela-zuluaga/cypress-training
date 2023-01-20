@@ -2,7 +2,7 @@ class PrincipalPage {
   readonly product: string
 
   constructor () {
-    this.product = ':nth-child(1) > .card > .card-block > .card-title > .hrefch'
+    this.product = '#tbodyid'
   }
 
   public visitPage (): void {
@@ -10,7 +10,7 @@ class PrincipalPage {
   }
 
   public selectProduct (): void {
-    cy.get(this.product).click()
+    cy.get(this.product).contains('Samsung galaxy s6').click()
   }
 }
 

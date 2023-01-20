@@ -4,7 +4,7 @@ class ProductDescriptionPage {
 
   constructor () {
     this.price = '.price-container'
-    this.addToCartButton = '.col-sm-12 > .btn'
+    this.addToCartButton = '.btn-success'
   }
 
   public getPrice (): void {

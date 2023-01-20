@@ -13,14 +13,14 @@ class ShoppingCartPage {
 
   constructor () {
     this.cartOption = '#cartur'
-    this.placeOrder = '.col-lg-1 > .btn'
+    this.placeOrder = '[data-target="#orderModal"]'
     this.name = '#name'
     this.country = '#country'
     this.city = '#city'
     this.card = '#card'
     this.month = '#month'
     this.year = '#year'
-    this.purchase = '#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary'
+    this.purchase = '[onclick="purchaseOrder()"]'
     this.alert = '.sweet-alert > h2'
     this.confirm = '.confirm'
   }
