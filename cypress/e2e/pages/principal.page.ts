@@ -1,19 +1,17 @@
 class PrincipalPage {
-    private product: string
-    private pageURL: string
+  readonly product: string
 
-    constructor() {
-        this.product = ':nth-child(1) > .card > .card-block > .card-title > .hrefch'
-        this.pageURL = 'https://www.demoblaze.com/'
-    }
+  constructor () {
+    this.product = '#tbodyid'
+  }
 
-    public visitPage() {
-        cy.visit(this.pageURL)
-    }
+  public visitPage (): void {
+    cy.visit(Cypress.env('BASE_URL'))
+  }
 
-    public selectProduct() {
-        cy.get(this.product).click()
-    }
+  public selectProduct (): void {
+    cy.get(this.product).contains('Samsung galaxy s6').click()
+  }
 }
 
 export { PrincipalPage }
