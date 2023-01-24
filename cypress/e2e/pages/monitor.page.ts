@@ -3,7 +3,7 @@ class MonitorListPage {
   readonly monitorName: string
   readonly monitorCategory: string
 
-  constructor() {
+  constructor () {
     this.monitorItem = '.card'
     this.monitorName = '.card-title'
     this.monitorCategory = "[onclick=\"byCat('monitor')\"]"

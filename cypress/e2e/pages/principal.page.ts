@@ -9,8 +9,8 @@ class PrincipalPage {
     cy.visit(Cypress.env('BASE_URL'))
   }
 
-  public selectProduct (): void {
-    cy.get(this.products).contains('Samsung galaxy s6').click()
+  public selectProduct (nameProduct: string): void {
+    cy.get(this.products).contains(nameProduct).click()
   }
 }
 
