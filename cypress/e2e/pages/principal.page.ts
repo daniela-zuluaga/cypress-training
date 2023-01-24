@@ -1,8 +1,8 @@
 class PrincipalPage {
-  readonly product: string
+  readonly products: string
 
   constructor () {
-    this.product = '#tbodyid'
+    this.products = '#tbodyid'
   }
 
   public visitPage (): void {
@@ -10,7 +10,7 @@ class PrincipalPage {
   }
 
   public selectProduct (): void {
-    cy.get(this.product).contains('Samsung galaxy s6').click()
+    cy.get(this.products).contains('Samsung galaxy s6').click()
   }
 }
 
