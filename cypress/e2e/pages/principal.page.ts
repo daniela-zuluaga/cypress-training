@@ -1,16 +1,16 @@
 class PrincipalPage {
-  readonly product: string
+  readonly products: string
 
   constructor () {
-    this.product = '#tbodyid'
+    this.products = '#tbodyid'
   }
 
   public visitPage (): void {
     cy.visit(Cypress.env('BASE_URL'))
   }
 
-  public selectProduct (): void {
-    cy.get(this.product).contains('Samsung galaxy s6').click()
+  public selectProduct (nameProduct: string): void {
+    cy.get(this.products).contains(nameProduct).click()
   }
 }
 
