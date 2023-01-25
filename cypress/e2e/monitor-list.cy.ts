@@ -1,7 +1,7 @@
 import { MonitorListPage, PrincipalPage } from "./pages";
 
 
-describe("the user navigates to the dresses page should", () => {
+describe("the user should navigate to the monitor page", () => {
 
   let principalPage: PrincipalPage;
   let monitorListPage: MonitorListPage;
