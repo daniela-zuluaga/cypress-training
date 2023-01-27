@@ -1,7 +1,7 @@
 class DownloadPage {
   readonly downloadButton: string
 
-  constructor() {
+  constructor () {
     this.downloadButton = '#downloadButton'
   }
 
@@ -13,7 +13,7 @@ class DownloadPage {
     cy.get(this.downloadButton).click()
   }
 
-  public validateDownloadFile(){
+  public validateDownloadFile (): void {
     cy.readFile('cypress/downloads/sampleFile.jpeg')
   }
 }
