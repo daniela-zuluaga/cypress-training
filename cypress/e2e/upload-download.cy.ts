@@ -1,11 +1,13 @@
-import { UploadPage } from "./pages";
+import { DownloadPage, UploadPage } from "./pages";
 
 describe("the user should can upload a file", () => {
 
-  let uploadPage: UploadPage;
+  let uploadPage: UploadPage
+  let downloadPage: DownloadPage
 
   before(() => {
     uploadPage = new UploadPage()
+    downloadPage = new DownloadPage()
   })
 
   it("upload a file", () => {
@@ -18,5 +20,17 @@ describe("the user should can upload a file", () => {
 
     //Assert
     uploadPage.validateFile(fileName)
+  })
+
+  it("download a file", () => {
+    //Arrange
+    const textToField = 'This is a test on cypress workshop'
+
+    //Act
+    downloadPage.visitPage()
+    downloadPage.downloadFile()
+
+    //Assert
+    downloadPage.validateDownloadFile()
   })
 })
