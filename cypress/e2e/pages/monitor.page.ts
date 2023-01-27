@@ -9,15 +9,15 @@ class MonitorListPage {
     this.monitorCategory = "[onclick=\"byCat('monitor')\"]"
   }
 
-  selectMonitorCategory (): void {
+  public selectMonitorCategory (): void {
     cy.get(this.monitorCategory).click()
   }
 
-  validateItemsNumber (itemsNumber: number): void {
+  public validateItemsNumber (itemsNumber: number): void {
     cy.get(this.monitorItem).should('have.length', itemsNumber)
   }
 
-  validateItemsName (names: string[]): void {
+  public validateItemsName (names: string[]): void {
     cy.get(this.monitorName).each((item, index) => {
       cy.wrap(item).should('contain.text', names[index])
     })

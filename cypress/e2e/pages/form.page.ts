@@ -1,5 +1,4 @@
 class PersonalFormPage {
-
   readonly firstName: string
   readonly lastName: string
   readonly email: string
@@ -11,7 +10,7 @@ class PersonalFormPage {
   readonly city: string
   readonly table: string
 
-  constructor() {
+  constructor () {
     this.firstName = '#firstName'
     this.lastName = '#lastName'
     this.email = '#userEmail'
@@ -23,11 +22,12 @@ class PersonalFormPage {
     this.city = '#city'
     this.table = '.table-responsive'
   }
+
   visitFormPage (): void {
     cy.visit(Cypress.env('FORM_URL'))
   }
 
-  fillForm (personalInformation: any): void {
+  public fillForm (personalInformation: any): void {
     cy.get(this.firstName).type(personalInformation.name)
     cy.get(this.lastName).type(personalInformation.lastName)
     cy.get(this.email).type(personalInformation.email)
@@ -41,13 +41,13 @@ class PersonalFormPage {
     cy.get(this.city).type('{enter}')
   }
 
-  fillHobbies (hobbies: string[]): void {
+  private fillHobbies (hobbies: string[]): void {
     hobbies.forEach((item) => {
       cy.get(this.hobbies).contains(item).click()
     })
   }
 
-  validateModalTable (personalInformation: any) {
+  public validateModalTable (personalInformation: any): void {
     cy.get(this.table).contains(personalInformation.name)
     cy.get(this.table).contains(personalInformation.lastName)
     cy.get(this.table).contains(personalInformation.email)

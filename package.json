@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:open": "npm run lint && cypress open",
-    "test:report":"npm test || npm run post-test",
+    "test:report": "npm test || npm run post-test",
     "post-test": "npm run combine-reports && npm run generate-report",
     "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
@@ -32,6 +32,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "cypress": "^12.3.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.2.3",
     "cypress-multi-reporters": "^1.6.2",
     "eslint": "^8.32.0",
